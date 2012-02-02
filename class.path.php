@@ -214,7 +214,7 @@ class path_wrapper{
     
 	private function init(){
 		
-		$data = $this->get("home");
+		$data = $this->getHome();
 		
 		if(!isset($data) && $data != false){
 		  
