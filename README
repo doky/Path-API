@@ -1,0 +1,28 @@
+PHP Class to connect on Path API.
+
+This first version are on readonly
+
+ABOUT PATH
+
+All trademarks are the property of their respective owners.
+
+About path    : https://path.com/about
+Download apps : https://path.com/
+
+METHODS
+
+* login 
+Set HTTP Authentification header for all requests
+
+* init
+Load data from current logged user
+
+* httpRequest
+Method for httpRequest
+
+* get*******
+Wrapper of path methods.
+
+CHANGELOG
+
+01/02/2012   - Fisrt version of the Path Wrapper (Read-Only)
