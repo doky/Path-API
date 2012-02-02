@@ -66,7 +66,7 @@ class path_wrapper{
     * @param           string           $username      # username
     * @param           string           $password      # password
     * 
-    * @return          array				   		   # user data
+    * @return          array				# user data
     * 
     **/
 		
@@ -87,12 +87,12 @@ class path_wrapper{
 	
 	
 	
-	/**
-    * @function        public        	getComments	   		# Get comments
+    /**
+    * @function        public        	getComments	   	# Get comments
     * 
     * @param           string           $moment_id      	# password
     *
-    * @return          array				   		   		# Array of comments/moments
+    * @return          array				   	# Array of comments/moments
     * 
     **/		
 	
@@ -113,10 +113,10 @@ class path_wrapper{
 	}
 	
 	
-	/**
+    /**
     * @function        public        	getPath	   			# Get path feed
     * 
-    * @return          array				   		   		#  Array of path activity
+    * @return          array				   		#  Array of path activity
     * 
     **/		
 	
@@ -137,10 +137,10 @@ class path_wrapper{
 	}
 
 
-	/**
+    /**
     * @function        public        	getHome		   			# Get home feed
     * 
-    * @return          array				   		   		    #  Array of personnal activity
+    * @return          array				   		    	#  Array of personnal activity
     * 
     **/		
 	
@@ -161,10 +161,10 @@ class path_wrapper{
 	}
 
 
-	/**
+    /**
     * @function        public        	getFriends   			# Get friends list
     * 
-    * @return          array				   		   		    #  Array of friends
+    * @return          array				   		#  Array of friends
     * 
     **/		
 	
@@ -183,10 +183,10 @@ class path_wrapper{
 	}
 
 	
-	/**
+    /**
     * @function        public        	getActivity   			# Get activity feed
     * 
-    * @return          array				   		   		    #  Array of activity
+    * @return          array				   		#  Array of activity
     * 
     **/		
 	
@@ -204,11 +204,11 @@ class path_wrapper{
 		return json_decode($data);
 	}
 	
-	
-	/**
+    
+    /**
     * @function        public        	init	   # Load data from current user 
     * 
-    * @return          array				   	   # user data
+    * @return          array			   # user data
     * 
     **/	
     
@@ -228,30 +228,30 @@ class path_wrapper{
 			
 		}
 
-		$this->user->id 	  = (!isset ($data->cover->user->id)) ? '0' : $data->cover->user->id;
-		$this->user->joined   =	(!isset ($data->cover->user->joined)) ? '0' : $data->cover->user->joined;
-		$this->user->cover 	  =	(!isset ($data->cover->photo->url)) ? '0' : $data->cover->photo->url.'/'.$data->cover->photo->web->file;
+		$this->user->id = (!isset ($data->cover->user->id)) ? '0' : $data->cover->user->id;
+		$this->user->joined = (!isset ($data->cover->user->joined)) ? '0' : $data->cover->user->joined;
+		$this->user->cover = (!isset ($data->cover->photo->url)) ? '0' : $data->cover->photo->url.'/'.$data->cover->photo->web->file;
 		$this->user->original =	(!isset ($data->cover->photo->url)) ? '0' : $data->cover->photo->url.'/'.$data->cover->photo->original->file;
 		$this->user->moments  = (!isset ($data->cover->moments)) ? '0' : $data->cover->moments;
 		
-		$this->locations 	   = (!isset ($data->locations)) ? '0' : $data->locations;
+		$this->locations = (!isset ($data->locations)) ? '0' : $data->locations;
 		$this->deleted_moments = (!isset ($data->deleted_moments)) ? '0' : $data->deleted_moments;
-		$this->moments 		   = (!isset ($data->moments)) ? '0' : $data->moments;
-		$this->music 		   = (!isset ($data->music)) ? '0' : $data->music;
-		$this->places 		   = (!isset ($data->places)) ? '0' : $data->places;
-		$this->sleep 		   = (!isset ($data->sleep)) ? '0' : $data->sleep;
-		$this->users           = (!isset ($data->users)) ? '0' : $data->users;
+		$this->moments = (!isset ($data->moments)) ? '0' : $data->moments;
+		$this->music = (!isset ($data->music)) ? '0' : $data->music;
+		$this->places = (!isset ($data->places)) ? '0' : $data->places;
+		$this->sleep = (!isset ($data->sleep)) ? '0' : $data->sleep;
+		$this->users = (!isset ($data->users)) ? '0' : $data->users;
 		
 		return $this->user;
 	}
 	
 	
-	/**
+    /**
     * @function        private        	httpRequest    # Http requests
     * 
     * @param           string           $url	       # path url
     * 
-    * @return          array				   		   # data
+    * @return          array			       # data
     * 
     **/	
 	
@@ -267,8 +267,8 @@ class path_wrapper{
 		$ch = curl_init();
 		
 		$http_headers = array('xPath Wrapper',
-				 		 	  'Authorization: Basic '.$this->authorization,
-		 		 		      'Accept-Charset: utf-8');
+				      'Authorization: Basic '.$this->authorization,
+		 		      'Accept-Charset: utf-8');
 				
 		curl_setopt($ch, CURLOPT_URL, $url);
 		curl_setopt($ch, CURLOPT_HEADER, false);
