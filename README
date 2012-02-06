@@ -20,8 +20,20 @@ Load data from current logged user
 * httpRequest
 Method for httpRequest
 
-* get*******
-Wrapper of path methods.
+* getPath()
+Load path data
+
+* getHome()
+Load home data
+
+* getComments()
+Load a single moments
+
+* getActivity()
+Get data of your activity
+
+* getSettings()
+Get data of user settings
 
 CHANGELOG
 
