@@ -35,10 +35,10 @@ Load friends lists
 Load a single moments
 
 * getActivity()
-Get data of your activity
+Get activity data (notifications)
 
 * getSettings()
-Get data of user settings
+Get user settings data
 
 CHANGELOG
 
