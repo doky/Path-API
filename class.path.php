@@ -72,7 +72,7 @@ class path_wrapper{
 		
 	public function login($username, $password) {
 	
-		if (!isset($username) || !isset($password) || !empty($username) || !empty($password)) {
+		if (!isset($username) || !isset($password) || empty($username) || empty($password)) {
 			
 			throw new Exception("Incorrect username or password"); 	
 		
